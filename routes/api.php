@@ -7,3 +7,5 @@ use App\Http\Controllers\FileUploadController;
 Route::post('/validate', [FileUploadController::class, 'validate']);
 
 Route::post('/upload', [FileUploadController::class, 'upload']);
+
+Route::post('/process', [FileUploadController::class, 'process']);

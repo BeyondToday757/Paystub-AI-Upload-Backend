@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "rewrites": [{ "source": "/(.*)", "destination": "/api/index.php" }],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        }
+    ],
+    "trailingSlash": false,
+    "functions": {
+        "api/index.php": {
+            "includeFiles": "public/**"
+        }
+    },
+    "cleanUrls": true
+}
